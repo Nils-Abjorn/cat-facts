@@ -17,8 +17,6 @@
 </template>
 
 <script setup lang="ts">
-  import Button from "primevue/button"
-  import Card from "primevue/card"
   import { useAxios } from "@vueuse/integrations/useAxios"
 
   const { data, isLoading, isFinished, execute } = useAxios(
