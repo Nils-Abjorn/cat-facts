@@ -4,9 +4,6 @@
 
 <script setup lang="ts">
   import { RouterView } from "vue-router"
-  import "primevue/resources/primevue.min.css" //core css
-  import "primevue/resources/themes/lara-light-blue/theme.css" //theme
-  import "primeicons/primeicons.css"
 </script>
 
 <style lang="scss">
