@@ -17,14 +17,14 @@
     </div>
 
     <div class="card-footer">
-      <el-button :icon="Search" circle @click="execute()" :loading="isLoading" />
+      <el-button :icon="Refresh" size="large" circle @click="execute()" :loading="isLoading" />
     </div>
   </el-card>
 </template>
 
 <script setup lang="ts">
   import { useAxios } from "@vueuse/integrations/useAxios"
-  import { Search } from "@element-plus/icons-vue"
+  import { Refresh } from "@element-plus/icons-vue"
 
   const { data, isLoading, execute } = useAxios("api/fact")
 </script>
