@@ -1,27 +1,20 @@
 <template>
-  <Card style="max-width: 400px; margin: auto">
-    <template #title> Cat fact </template>
-    <template #content>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
-        repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa
-        ratione quam perferendis esse, cupiditate neque quas!
-      </p>
-    </template>
-    <template #footer>
-      <div class="centered">
-        <Button icon="pi pi-refresh" class="p-button-rounded p-button-primary" @click="execute()" />
-      </div>
-    </template>
-  </Card>
+  <ElCard style="max-width: 400px">
+    <template #header> Cat fact </template>
+    <p>
+      {{ data.fact }}
+    </p>
+
+    <div class="centered">
+      <ElButton @click="execute()" />
+    </div>
+  </ElCard>
 </template>
 
 <script setup lang="ts">
   import { useAxios } from "@vueuse/integrations/useAxios"
 
-  const { data, isLoading, isFinished, execute } = useAxios(
-    "https://jsonplaceholder.typicode.com/todos/1"
-  )
+  const { data, isLoading, isFinished, execute } = useAxios("api/fact")
 </script>
 
 <style lang="scss" scoped>
