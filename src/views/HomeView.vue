@@ -1,6 +1,6 @@
 <template>
   <CatTail class="tail" />
-  <FactCard />
+  <!-- <FactCard /> -->
 </template>
 
 <script setup lang="ts">

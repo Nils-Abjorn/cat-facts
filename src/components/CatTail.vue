@@ -17,28 +17,28 @@
   }
 
   function calcRandomAngle(previousAngle: number) {
-    const angle = previousAngle - (Math.random() * 60 - 30)
+    const angle = previousAngle + Math.random() * 1.4 - 0.7
     return angle
   }
 
   function calcLinePoint(previousLinePoint: LinePoint) {
     console.log(previousLinePoint.angle)
     const point = {
-      x: 5 + 2 * Math.sin(previousLinePoint.angle),
-      y: 10 - 2 * Math.cos(previousLinePoint.angle),
+      x: previousLinePoint.x + 2 * Math.cos(previousLinePoint.angle),
+      y: previousLinePoint.y - 2 * Math.sin(previousLinePoint.angle),
       angle: calcRandomAngle(previousLinePoint.angle),
     }
     console.log(point)
     return point
   }
 
-  function initLine(totalPoints = 2): LinePoint[] {
+  function initLine(totalPoints = 4): LinePoint[] {
     const line: LinePoint[] = []
 
     const lineOrigin: LinePoint = {
       x: 5,
       y: 10,
-      angle: calcRandomAngle(90),
+      angle: calcRandomAngle(Math.PI / 2),
     }
     line.push(lineOrigin)
     for (let i = 1; i < totalPoints; i++) {
