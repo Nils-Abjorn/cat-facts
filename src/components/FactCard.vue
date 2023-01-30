@@ -17,7 +17,13 @@
     </div>
 
     <div class="card-footer">
-      <el-button :icon="Refresh" size="large" circle @click="execute()" :loading="isLoading" />
+      <el-button
+        :icon="Refresh"
+        size="large"
+        circle
+        @click="execute(), $emit('newFact')"
+        :loading="isLoading"
+      />
     </div>
   </el-card>
 </template>

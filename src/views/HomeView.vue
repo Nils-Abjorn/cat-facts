@@ -1,16 +1,16 @@
 <template>
-  <CatTail class="tail" />
-  <!-- <FactCard /> -->
+  <TailHandler ref="tailHandlerRef" />
+  <FactCard @newFact="addTail()" />
 </template>
 
 <script setup lang="ts">
   import FactCard from "@/components/FactCard.vue"
-  import CatTail from "@/components/CatTail.vue"
-</script>
+  import TailHandler from "@/components/TailHandler.vue"
+  import { ref } from "vue"
 
-<style scooped lang="scss">
-  .tail {
-    position: fixed;
-    bottom: 0;
+  const tailHandlerRef = ref()
+
+  function addTail() {
+    tailHandlerRef.value.addTail()
   }
-</style>
+</script>
