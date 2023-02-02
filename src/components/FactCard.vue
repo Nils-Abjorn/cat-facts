@@ -33,6 +33,8 @@ const { data, isLoading, execute } = useAxios("api/fact")
 .card-box {
   max-width: 400px;
   width: 100%;
+  border-radius: var(--el-border-radius-round);
+  margin: 8px;
 }
 
 .card-header {
@@ -48,10 +50,18 @@ const { data, isLoading, execute } = useAxios("api/fact")
 }
 
 .card-body {
-  height: 150px;
+  min-height: 150px;
 }
 
 p {
   margin: 0;
+}
+
+@media all and (max-width: 416px) {
+
+  //416px = card size + margins
+  .card-body {
+    min-height: 240px;
+  }
 }
 </style>
