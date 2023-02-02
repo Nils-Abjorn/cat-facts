@@ -6,7 +6,7 @@
       </div>
     </template>
     <div class="card-body">
-      <p v-if="data"> {{ data.fact }}</p>
+      <TypeWritter v-if="data" :typing-speed="6" :text="data.fact" />
       <el-skeleton v-else animated>
         <template #template>
           <el-skeleton-item variant="p" style="width: 100%" />
@@ -15,7 +15,6 @@
         </template>
       </el-skeleton>
     </div>
-
     <div class="card-footer">
       <el-button :icon="Refresh" size="large" circle @click="execute(), $emit('newFact')" :loading="isLoading" />
     </div>
@@ -25,6 +24,7 @@
 <script setup lang="ts">
 import { useAxios } from "@vueuse/integrations/useAxios"
 import { Refresh } from "@element-plus/icons-vue"
+import TypeWritter from "./TypeWritter.vue";
 
 const { data, isLoading, execute } = useAxios("api/fact")
 </script>

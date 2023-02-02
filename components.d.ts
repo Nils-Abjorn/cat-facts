@@ -14,5 +14,6 @@ declare module '@vue/runtime-core' {
     FactCard: typeof import('./src/components/FactCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TypeWritter: typeof import('./src/components/TypeWritter.vue')['default']
   }
 }
