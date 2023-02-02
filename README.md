@@ -12,7 +12,7 @@ this application serves as a demonstration on how to configure and use vuejs in 
 - vueuse + integrations: composable wrappers for vue3 (and axios integration)
 - axios: used to request the API
 - pinia: state management (not needed yet)
-- sass: css but better (not used at his full potential in this demo)
+- sass: css but better (mainly used to forward variables in this demo)
 - vue (of course)
 - vue-router: used to fake navigation in the single page application
 - typeScript: strong typing

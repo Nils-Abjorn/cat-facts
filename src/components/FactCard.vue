@@ -1,7 +1,7 @@
 <template>
   <el-card class="card-box">
-    <template #header
-      ><div class="card-header">
+    <template #header>
+      <div class="card-header">
         <h2>Cat fact 🐈</h2>
       </div>
     </template>
@@ -17,46 +17,41 @@
     </div>
 
     <div class="card-footer">
-      <el-button
-        :icon="Refresh"
-        size="large"
-        circle
-        @click="execute(), $emit('newFact')"
-        :loading="isLoading"
-      />
+      <el-button :icon="Refresh" size="large" circle @click="execute(), $emit('newFact')" :loading="isLoading" />
     </div>
   </el-card>
 </template>
 
 <script setup lang="ts">
-  import { useAxios } from "@vueuse/integrations/useAxios"
-  import { Refresh } from "@element-plus/icons-vue"
+import { useAxios } from "@vueuse/integrations/useAxios"
+import { Refresh } from "@element-plus/icons-vue"
 
-  const { data, isLoading, execute } = useAxios("api/fact")
+const { data, isLoading, execute } = useAxios("api/fact")
 </script>
 
 <style lang="scss" scoped>
-  .card-box {
-    max-width: 400px;
-    width: 100%;
-  }
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
+.card-box {
+  max-width: 400px;
+  width: 100%;
+}
 
-  .card-footer {
-    display: flex;
-    justify-content: center;
-  }
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
-  .card-body {
-    height: 150px;
-  }
+.card-footer {
+  display: flex;
+  justify-content: center;
+}
 
-  p {
-    margin: 0;
-  }
+.card-body {
+  height: 150px;
+}
+
+p {
+  margin: 0;
+}
 </style>
