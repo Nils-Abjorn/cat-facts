@@ -16,7 +16,7 @@ let timeouts: (number | undefined)[] = [];
 function typeText(text: string) {
     typed.value = "";
     [...text].forEach((c, interval) => {
-        timeouts.push(setTimeout(() => typed.value += c, props.typingSpeed * interval))
+        timeouts.push(window.setTimeout(() => typed.value += c, props.typingSpeed * interval))
     })
 }
 
