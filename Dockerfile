@@ -7,7 +7,5 @@ COPY . .
 RUN yarn build
 
 # production stage
-FROM nginx:stable-alpine as production-stage
-COPY --from=build-stage /app/dist /usr/share/nginx/html
+FROM node:lts-alpine as production-stage
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
