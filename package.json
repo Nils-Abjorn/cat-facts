@@ -4,7 +4,7 @@
   "description": "A vue3 scalable (and absolutly overkill) application fetching data from catfact.ninja rest API",
   "main": "index.js",
   "scripts": {
-    "install": "yarn install && yarn install:client && yarn install:server",
+    "install": "yarn install:client && yarn install:server",
     "install:client": "cd client && yarn install",
     "install:server": "cd server && yarn install",
     "build": "yarn build:client && yarn build:server",
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Nils-Abjorn/cat-facts/issues"
   },
-  "homepage": "https://github.com/Nils-Abjorn/cat-facts#readme"
+  "homepage": "https://github.com/Nils-Abjorn/cat-facts#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
 }
