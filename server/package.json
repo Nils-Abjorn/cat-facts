@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "postbuild": "copy package*.json dist && cd dist && yarn install --prod",
     "start": "node index.js",
     "dev": "nodemon index.ts"
   },
