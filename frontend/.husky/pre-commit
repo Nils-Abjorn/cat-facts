@@ -1,0 +1,3 @@
+cd frontend 
+pnpm lint --cache 
+pnpm format --cache
