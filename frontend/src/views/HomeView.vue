@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import FactCard from "@/components/FactCard.vue"
+import FactCard from '@/components/FactCard.vue'
 </script>
